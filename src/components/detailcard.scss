@@ -1,0 +1,111 @@
+@use 'sass:color';
+@import '../common';
+
+.detailcard {
+  position: relative;
+  border-radius: $radius-l;
+  background: $color-white;
+
+  .detailcard-img {
+    position: relative;
+    height: 200px;
+    border-radius: $radius-l $radius-l 0 0;
+    background: $inactive;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(rgb(0 25 50 / 50%), transparent);
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+      transform: rotate(-180deg);
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .detailcard-img .detailcard-img-kcal {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    font-weight: 600;
+    text-align: right;
+    color: $color-white;
+    filter: drop-shadow(0 1px 1px rgb(0 25 50 / 50%));
+  }
+
+  .iconbutton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    transition: $time;
+    filter: drop-shadow(0 1px 1px rgb(0 25 50 / 50%));
+  }
+
+  .iconbutton:last-of-type {
+    left: auto;
+    right: 20px;
+  }
+
+  .iconbutton:hover {
+    transform: scale($zoom, $zoom);
+  }
+
+  .detailcard-logo {
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+  }
+
+  .detailcard-calculator .icon {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .modal {
+    .detailcard {
+      border-radius: 0;
+
+      .detailcard-img {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .detailcard {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page {
+    .detailcard {
+      box-shadow: $global-shadow;
+    }
+  }
+
+  .detailcard {
+    .detailcard-img {
+      height: 350px;
+    }
+  }
+}

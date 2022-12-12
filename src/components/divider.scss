@@ -1,0 +1,22 @@
+@use 'sass:color';
+@import '../common';
+
+/* Divider
+ * https://codepen.io/macbleser/pen/crnBa
+ * ========================================================================== */
+
+.divider {
+  position: relative;
+  height: 1px;
+  margin: 80px 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #cbcfd3 30%, #cbcfd3 70%, rgba(255, 255, 255, 0) 100%);
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 10px;
+    background: radial-gradient(50% 100% at 50% 0%, #e3e6e9 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}

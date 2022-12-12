@@ -1,0 +1,28 @@
+@use 'sass:color';
+@import '../common';
+
+/* Code
+ * ========================================================================== */
+
+code {
+  display: block;
+  padding: 15px 18px;
+  font-family: Menlo, monospace;
+  font-size: 12px;
+  white-space: pre;
+  color: $color-white;
+  border-radius: $radius-s;
+  background: $color-gray-1;
+
+  &.is-light {
+    color: $color-gray-1;
+    background: rgb(0 20 40 / .05);
+  }
+}
+
+.docs-classnames > code,
+p > code,
+td > code {
+  display: inline-block;
+  padding: 4px 8px;
+}

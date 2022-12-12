@@ -1,0 +1,12 @@
+{
+  "name": "ebalance-design-system",
+  "version": "0.22.0-dev",
+  "private": true,
+  "scripts": {
+    "watch": "sass src/index.scss:dist/css/index.min.css --style=compressed --watch",
+    "build": "sass src/index.scss:dist/css/index.min.css --style=compressed"
+  },
+  "dependencies": {
+    "sass": "^1.54.8"
+  }
+}

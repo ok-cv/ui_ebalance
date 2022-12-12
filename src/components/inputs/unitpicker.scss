@@ -1,0 +1,25 @@
+@use 'sass:color';
+@import '../../common';
+
+.unitpicker {
+  padding: 0 20px 0 6px;
+  font-size: $text-medium;
+  color: $color-white;
+  border-radius: $radius-full;
+  background: $color-blue-2 no-repeat 85% center / 16px 12px $svg-select-arrow-white;
+  cursor: pointer;
+}
+
+.unitpicker option {
+  color: $color-gray-1;
+}
+
+.foodamount {
+  position: relative;
+}
+
+.foodamount .input + .unitpicker {
+  position: absolute;
+  top: 11px;
+  right: 0;
+}

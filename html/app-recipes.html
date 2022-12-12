@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Recipes</title>
+
+  <link rel="stylesheet" href="../dist/css/index.min.css">
+
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <div class="inner">
+        <a><img src="../dist/img/logo-white.svg"></a>
+        <nav>
+          <ul>
+            <li><a>Nav Item</a></li>
+            <li><div class="is-active"><div class="has-subnav">Nav Item</div></div></li>
+            <li><a>Nav Item</a></li>
+            <li><a>Nav Item</a></li>
+            <li><a>Nav Item</a></li>
+            <li><div><div class="has-subnav">Hello, Alexandra!</div><div class="nav-photo"></div></div></li>
+            <li class="offcanvas-toggle"><svg viewBox="0 0 100 100"><path d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/><path d="m 70,50 h -40"/><path d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/></svg></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <main class="is-sm-circle">
+      <div class="pagecircle"></div>
+
+      <div class="container">
+
+        <h1 class="mb-5">Rezepte</h1>
+
+        <div class="filter-mobile-trigger filter-toggle">
+          <div class="icon icon-filter-gray-1"></div>
+          <span>Filter öffnen</span>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-3 filter-sidebar">
+
+            <div class="input"><input type="text" placeholder=" "><label>Jetzt suchen...</label></div>
+
+            <div class="filter-sidebar-title mt-3 mb-1"><span>Erweiterte Suche</span></div>
+            <label class="checkbox"><input type="checkbox"><span class="label">In Zutaten suchen</span></label>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">In Beschreibung suchen</span></label>
+
+            <div class="filter-sidebar-title mt-3 mb-1"><span>Zubereitungszeit</span></div>
+            <div class="range mr-1" data-start="1" data-end="120" data-value="120"></div>
+
+            <div class="filter-sidebar-title mt-3 mb-1"><span>Anzahl Portionen</span></div>
+            <div class="range mr-1" data-start="1" data-end="10" data-value="2"></div>
+
+            <div class="filter-sidebar-title mt-3 mb-1"><span>Mahlzeiten</span></div>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Frühstück</span></label>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Mittagessen</span></label>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Nachtessen</span></label>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Snack</span></label>
+
+            <div class="filter-sidebar-title mt-3 mb-1"><span>Nährwerte</span></div>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Kohlenhydrate</span></label>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Proteine</span></label>
+            <label class="checkbox mt-1"><input type="checkbox"><span class="label">Fett</span></label>
+
+            <div class="filter-sidebar-title mt-3 mb-1"><span>Kalorien pro Portion</span></div>
+            <div class="range mr-1" data-start="1" data-end="500" data-value="250"></div>
+
+            <div class="input mt-3"><input type="text" placeholder=" "><label>Zutaten</label></div>
+            <div class="filter-sidebar-ingredient"><div>Tomaten</div><div class="icon icon-close-gray-2"></div></div>
+            <div class="filter-sidebar-ingredient"><div>Tomaten</div><div class="icon icon-close-gray-2"></div></div>
+            <div class="filter-sidebar-ingredient"><div>Tomaten</div><div class="icon icon-close-gray-2"></div></div>
+
+          </div>
+          <div class="col-12 col-lg-9 pl-lg-5">
+
+            <div class="row g-2">
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image">
+                    <img src="../dist/img/demo/salad-1.jpg">
+                  </div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image"></div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image"></div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image"></div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="recipecard">
+                  <div class="recipecard-image"></div>
+                  <div class="recipecard-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between mt-2"><span>500 kcal</span><span>60 Min.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <div class="offcanvas">
+    <div class="filter-sidebar p-2">
+      <div class="input"><input type="text" placeholder=" "><label>Jetzt suchen...</label></div>
+
+      <div class="filter-sidebar-title mt-3 mb-1"><span>Erweiterte Suche</span></div>
+      <label class="checkbox"><input type="checkbox"><span class="label">In Zutaten suchen</span></label>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">In Beschreibung suchen</span></label>
+
+      <div class="filter-sidebar-title mt-3 mb-1"><span>Zubereitungszeit</span></div>
+      <div class="range mr-1" data-start="1" data-end="120" data-value="120"></div>
+
+      <div class="filter-sidebar-title mt-3 mb-1"><span>Anzahl Portionen</span></div>
+      <div class="range mr-1" data-start="1" data-end="10" data-value="2"></div>
+
+      <div class="filter-sidebar-title mt-3 mb-1"><span>Mahlzeiten</span></div>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Frühstück</span></label>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Mittagessen</span></label>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Nachtessen</span></label>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Snack</span></label>
+
+      <div class="filter-sidebar-title mt-3 mb-1"><span>Nährwerte</span></div>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Kohlenhydrate</span></label>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Proteine</span></label>
+      <label class="checkbox mt-1"><input type="checkbox"><span class="label">Fett</span></label>
+
+      <div class="filter-sidebar-title mt-3 mb-1"><span>Kalorien pro Portion</span></div>
+      <div class="range mr-1" data-start="1" data-end="500" data-value="250"></div>
+
+      <div class="input mt-3"><input type="text" placeholder=" "><label>Zutaten</label></div>
+      <div class="filter-sidebar-ingredient"><div>Tomaten</div><div class="icon icon-close-gray-2"></div></div>
+      <div class="filter-sidebar-ingredient"><div>Tomaten</div><div class="icon icon-close-gray-2"></div></div>
+      <div class="filter-sidebar-ingredient"><div>Tomaten</div><div class="icon icon-close-gray-2"></div></div>
+    </div>
+  </div>
+
+  <script src="../dist/js/header.js"></script>
+
+  <script>
+    const toggle = document.querySelector('.filter-toggle')
+    const sidebar = document.querySelector('.offcanvas')
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('is-open')
+    })
+
+    const ranges = document.querySelectorAll('.range')
+
+    ranges.forEach((range) => {
+      const start = range.dataset.start
+      const end = range.dataset.end
+      const value = range.dataset.value
+
+      const rangeValues = (start, end) => {
+        const rangeArray = []
+
+        for (let i = start; i <= end; i++) rangeArray.push(i - start)
+
+        return rangeArray
+      }
+
+      const arr = rangeValues(start, end)
+      let steps = ''
+
+      arr.forEach((cur) => {
+        if (end - start >= 100) {
+          if (cur % 10 === 0) {
+            steps += `<div class="range-step"></div>`
+          }
+        } else {
+          steps += `<div class="range-step"></div>`
+        }
+      })
+
+      const html = `
+        <div class="range">
+          <div class="range-ui">
+            ${steps}
+            <div class="range-track"></div>
+          </div>
+          <div class="range-ui is-empty" style="clip-path: inset(0 -5px 0 calc((100% / calc(${end} - ${start})) * calc(var(--myvar) - ${start})))">
+            ${steps}
+            <div class="range-track"></div>
+          </div>
+          <div class="range-marker" style="left: calc((100% / calc(${end} - ${start})) * calc(var(--myvar) - ${start}))">
+            <span></span>
+          </div>
+          <input class="range-input" type="range" min="${start}" max="${end}" step="1" value="${value}">
+        </div>
+      `
+
+      range.insertAdjacentHTML('beforeend', html)
+    })
+
+    const rangesInputs = document.querySelectorAll('.range input[type="range"]')
+
+    rangesInputs.forEach((cur) => {
+      cur.parentNode.style.setProperty('--myvar', cur.value)
+      cur.parentNode.querySelector(':scope .range-marker span').innerText = cur.value == 41 ? '40+' : cur.value
+
+      cur.addEventListener('input', (ev) => {
+        ev.target.parentNode.style.setProperty('--myvar', ev.target.value)
+        ev.target.parentNode.querySelector(':scope .range-marker span').innerText = ev.target.value == 41 ? '40+' : ev.target.value
+      })
+    })
+  </script>
+
+</body>
+</html>

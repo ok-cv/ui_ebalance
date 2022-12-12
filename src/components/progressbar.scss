@@ -1,0 +1,30 @@
+@use 'sass:color';
+@import '../common';
+
+.progressbar {
+  font-size: $text-small;
+  line-height: 1;
+  text-align: center;
+  color: $color-white;
+
+  .progressbar-bar {
+    width: 75px;
+    height: 4px;
+    margin: 5px auto 0;
+    background: rgb(255 255 255 / 30%);
+    overflow: hidden;
+  }
+
+  .progressbar-bar-percent {
+    height: 100%;
+    background: $color-white;
+  }
+
+  &.is-over100 {
+    color: $color-gray-1;
+  }
+
+  &.is-over100 .progressbar-bar-percent {
+    background: $color-gray-1;
+  }
+}

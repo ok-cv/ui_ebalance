@@ -1,0 +1,126 @@
+@use 'sass:color';
+@import '../common';
+
+/* design-system.ebalance.dev
+ * ========================================================================== */
+
+/* Layout */
+
+.docs-grid-showcase {
+  padding: 15px 0;
+  font-family: Menlo, monospace;
+  font-size: $text-medium;
+  text-align: center;
+  background: $color-gray-4;
+}
+
+/* Infos */
+
+.docs-info {
+  position: relative;
+  padding: 15px 20px;
+  font-size: $text-medium;
+  background: $color-gray-4;
+  border-left: 5px solid $color-blue-1;
+
+  &.is-monospace {
+    font-family: Menlo, monospace;
+  }
+}
+
+/* Class Names */
+
+.docs-classnames {
+  position: relative;
+  padding-left: 25px;
+  background: 0 6px / 16px 16px $svg-code no-repeat;
+}
+
+/* Examples */
+
+.docs-examples {
+  padding: 30px 20px;
+  font-size: $text-medium;
+  border-left: 5px solid $color-gray-4;
+}
+
+/* Logos */
+
+.docs-download-logo {
+  display: inline-flex;
+  padding: 20px;
+}
+
+/* Icons */
+
+.docs-icon-copy {
+  position: absolute;
+  opacity: 0;
+}
+
+.docs-icon {
+  position: relative;
+  padding: 5px;
+  border-radius: $radius-s;
+  transition: $time;
+  cursor: pointer;
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    pointer-events: none;
+  }
+
+  [class*='white'] {
+    filter: drop-shadow(0 1px 1px rgb(0 25 50 / 30%));
+  }
+
+  &:hover {
+    background: $color-gray-4;
+  }
+
+  &-copied::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    border-radius: $radius-full;
+    background: $color-blue-2 no-repeat center / 12px $svg-input-check-white;
+  }
+}
+
+/* Demos */
+
+.demo-card {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  border-radius: $radius-s;
+  background: $color-white;
+  box-shadow: $global-shadow;
+
+  &:not(:last-child) {
+    margin-bottom: $spacing-4;
+  }
+
+  &-image {
+    width: 120px;
+    height: 120px;
+    border-radius: $radius-s 0 0 $radius-s;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,103 @@
+@use 'sass:color';
+@import '../common';
+
+.table {
+  width: 100%;
+  font-size: $text-medium;
+  border-collapse: collapse;
+  border-top: 1px solid $color-gray-3;
+
+  tr {
+    border-bottom: 1px solid $color-gray-3;
+  }
+
+  th,
+  td {
+    padding: 10px 15px;
+    text-align: left;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      text-align: right;
+    }
+  }
+
+  &.is-invoice {
+    tr:last-child {
+      border-top: 3px double $color-gray-3;
+      border-bottom: 3px double $color-gray-3;
+    }
+    td:last-child {
+      font-weight: bold;
+    }
+  }
+
+  &.is-recipe {
+    th:first-child,
+    td:first-child {
+      width: 80px;
+      text-align: right;
+    }
+    th:last-child,
+    td:last-child {
+      text-align: left;
+    }
+  }
+
+  &.is-nutrition {
+    td {
+      vertical-align: baseline;
+    }
+    th:first-child,
+    td:first-child {
+      width: 25px;
+      padding-right: 0;
+    }
+    th:nth-child(n+3),
+    td:nth-child(n+3) {
+      width: 80px;
+      text-align: right;
+    }
+    .table-nutrition-indicator {
+      width: 20px;
+      height: 10px;
+      border-radius: $radius-full;
+    }
+    .table-nutrition-fibre {
+      display: block;
+      margin-top: 8px;
+      font-size: $text-small;
+      color: $color-gray-2;
+    }
+  }
+
+  &.is-striped {
+    thead tr,
+    tbody tr:nth-child(even) {
+      background: $color-gray-4;
+    }
+
+    th,
+    td {
+      &:first-child {
+        padding-left: 15px;
+      }
+  
+      &:last-child {
+        padding-right: 15px;
+      }
+    }
+
+    th {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: $color-gray-2;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use 'sass:color';
+@import '../common';
+
+.is-visa {
+    background: url('../img/paymentmethods/visa.svg') no-repeat center;
+  }
+
+.is-mastercard {
+    background: url('../img/paymentmethods/mastercard.svg') no-repeat center;
+  }
+
+.is-americanexpress {
+    background: url('../img/paymentmethods/amex.svg') no-repeat center;
+  }
+
+.is-postcard {
+    background: url('../img/paymentmethods/postfinance.svg') no-repeat center;
+  }
+
+.is-twint {
+    background: url('../img/paymentmethods/twint.svg') no-repeat center;
+  }
+
+  .is-invoice {
+    background: url('../img/paymentmethods/invoice.svg') no-repeat center;
+  }

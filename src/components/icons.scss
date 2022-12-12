@@ -1,0 +1,84 @@
+@use 'sass:color';
+@import '../common';
+
+@mixin icon($name) {
+  .icon-#{$name} {
+    &-gray-1 { background-image: url(../img/icons/gray-1/#{$name}.svg); }
+    &-gray-2 { background-image: url(../img/icons/gray-2/#{$name}.svg); }
+    &-blue-2 { background-image: url(../img/icons/blue-2/#{$name}.svg); }
+    &-white  { background-image: url(../img/icons/white/#{$name}.svg);  }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+
+  &[class*='wateremptyplus'] {
+    position: relative;
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      font-weight: 700;
+    }
+  }
+
+  &-wateremptyplus {
+    &-gray-1::after { color: #ffffff; }
+    &-gray-2::after { color: #888888; }
+    &-blue-2::after { color: #46afe2; }
+    &-white::after  { color: #a1a8af; }
+  }
+}
+
+@include icon('arrowdown');
+@include icon('arrowleft');
+@include icon('arrowright');
+@include icon('arrowup');
+@include icon('bag');
+@include icon('belly');
+@include icon('biceps');
+@include icon('bmi');
+@include icon('bookmark');
+@include icon('bookmarkfilled');
+@include icon('calendar');
+@include icon('camera');
+@include icon('check');
+@include icon('clock');
+@include icon('close');
+@include icon('construction');
+@include icon('copy');
+@include icon('cupcake');
+@include icon('edit');
+@include icon('filter');
+@include icon('fire');
+@include icon('goal');
+@include icon('heart');
+@include icon('heartfilled');
+@include icon('loadingspinner');
+@include icon('menuh');
+@include icon('menuv');
+@include icon('minus');
+@include icon('move');
+@include icon('plus');
+@include icon('refresh');
+@include icon('replace');
+@include icon('scale');
+@include icon('search');
+@include icon('socialfacebook');
+@include icon('socialinstagram');
+@include icon('socialyoutube');
+@include icon('tapeline');
+@include icon('timer');
+@include icon('trash');
+@include icon('users');
+@include icon('utensils');
+@include icon('watch');
+@include icon('waterempty');
+@include icon('wateremptyplus');
+@include icon("waterfull");
+@include icon('weight');

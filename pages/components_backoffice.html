@@ -1,0 +1,211 @@
+const ComponentsBackoffice = `
+
+<vue-template>
+
+  <div class="py-6">
+    <div class="container">
+
+      <h1>Backoffice</h1>
+
+      <h2 class="mt-6 mb-4">Button</h2>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>bo-button</code> & <code>is-danger | is-safe | is-secondary</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <button class="bo-button">Save</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <button class="bo-button is-danger">Save</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <button class="bo-button is-safe">Save</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <button class="bo-button is-secondary">Save</button>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>bo-button</code> & <code>is-small</code> & <code>is-danger | is-safe | is-secondary</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="row g-2">
+            <div class="col-12 col-lg-auto">
+              <button class="bo-button is-small">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="row g-2">
+            <div class="col-12 col-lg-auto">
+              <button class="bo-button is-small is-danger">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="row g-2">
+            <div class="col-12 col-lg-auto">
+              <button class="bo-button is-small is-safe">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="row g-2">
+            <div class="col-12 col-lg-auto">
+              <button class="bo-button is-small is-secondary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Card</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="docs-classnames">
+                <code>bo-card</code>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="bo-card">
+                <div class="bo-card-head">
+                  Title
+                </div>
+                <div class="bo-card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta quas aspernatur, est quam molestiae esse alias beatae expedita iste rerum, nisi quis animi dolores ea consectetur ratione, harum sequi?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="docs-classnames">
+                <code>bo-card</code> & <code>is-hex</code>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="bo-card is-hex">
+                <div class="bo-card-body">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-auto">
+                      <div class="bg-gray-3 js-read-color"></div>
+                    </div>
+                    <div class="col text-right">
+                      <div class="js-write-color">Lorem Ipsum</div>
+                      <div>Lorem Ipsum</div>
+                      <div>Lorem Ipsum</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="docs-classnames">
+                <code>bo-card</code> & <code>is-page</code>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="bo-card is-page">
+                <div class="bo-card-head">
+                  <a class="bo-card-iframe">
+                    <iframe class="bg-gray-3"></iframe>
+                  </a>
+                </div>
+                <div class="bo-card-body">
+                  Iframe
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Header</h2>
+
+      <div class="header is-white" style="position: relative; z-index: 9;">
+        <div class="inner">
+          <a class="text-logo">Design System</a>
+          <nav>
+            <ul>
+              <li>
+                <div class="is-active"><div class="has-subnav">Nav Item</div></div>
+                <ul class="nav-subnav">
+                  <li><a>Sub Nav Item</a></li>
+                  <li><a class="is-active">Sub Nav Item</a></li>
+                  <li><a>Sub Nav Item</a></li>
+                </ul>
+              </li>
+              <li><a>Nav Item</a></li>
+              <li><a>Nav Item</a></li>
+              <li><a>Nav Item</a></li>
+              <li>
+                <div><div class="has-subnav">Nav Item</div></div>
+                <ul class="nav-subnav">
+                  <li><a>Sub Nav Item</a></li>
+                  <li><a class="is-active">Sub Nav Item</a></li>
+                  <li><a>Sub Nav Item</a></li>
+                </ul>
+              </li>
+              <li class="offcanvas-toggle"><svg viewBox="0 0 100 100"><path d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/><path d="m 70,50 h -40"/><path d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/></svg></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header is-black" style="position: relative; z-index: 8; margin-top: 100px;">
+        <div class="inner">
+          <a class="text-logo">eBalance Backoffice</a>
+          <nav>
+            <ul>
+              <li>
+                <div class="is-active"><div class="has-subnav">Nav Item</div></div>
+                <ul class="nav-subnav">
+                  <li><a>Sub Nav Item</a></li>
+                  <li><a class="is-active">Sub Nav Item</a></li>
+                  <li><a>Sub Nav Item</a></li>
+                </ul>
+              </li>
+              <li><a>Nav Item</a></li>
+              <li><a>Nav Item</a></li>
+              <li><a>Nav Item</a></li>
+              <li>
+                <div><div class="has-subnav">Nav Item</div></div>
+                <ul class="nav-subnav">
+                  <li><a>Sub Nav Item</a></li>
+                  <li><a class="is-active">Sub Nav Item</a></li>
+                  <li><a>Sub Nav Item</a></li>
+                </ul>
+              </li>
+              <li class="offcanvas-toggle"><svg viewBox="0 0 100 100"><path d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/><path d="m 70,50 h -40"/><path d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/></svg></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="bo-subheader">
+        <div>
+          Title
+        </div>
+        <ul>
+          <li><a>Menu Link</a></li>
+          <li><a>Menu Link</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</vue-template>
+
+`;

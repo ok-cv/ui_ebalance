@@ -1,0 +1,37 @@
+@use 'sass:color';
+@import '../common';
+
+.search-headline {
+  margin: 20px 0;
+  padding: 15px;
+  font-weight: 600;
+  border-radius: $radius-s;
+  background: $color-gray-4;
+}
+
+.search-headline span {
+  margin-left: 5px;
+  font-size: $text-small;
+  font-weight: 400;
+  color: $color-gray-2;
+}
+
+.ais-InfiniteHits-loadMore { /* Algolia Class */
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: $text-medium;
+  text-align: center;
+  color: $color-blue-2;
+  border-bottom: 1px solid $color-gray-4;
+  background: transparent;
+  cursor: pointer;
+
+  &--disabled {
+    display: none;
+  }
+}
+
+.ais-InfiniteHits-item {
+  margin-bottom: $spacing-2;
+}

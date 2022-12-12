@@ -1,0 +1,76 @@
+@use 'sass:color';
+@import '../common';
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.ReactModal__Overlay {
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  background: rgb(0 25 50 / 50%) !important;
+}
+
+.ReactModal__Content {
+  /* unset all styles */
+  position: unset !important;
+  top: unset !important;
+  left: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+  padding: unset !important;
+  border-radius: unset !important;
+  border: unset !important;
+  outline: unset !important;
+  background: unset !important;
+  overflow: unset !important;
+  /* make closing the modal by clicking outside of it possible */
+  pointer-events: none;
+}
+
+.modal.is-small,
+.modal.is-medium {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: $color-white;
+  box-shadow: 0 5px 30px rgb(0 25 50 / 10%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: all;
+}
+
+.modal.is-small {
+  padding: 50px;
+}
+
+.modal.is-small .iconbutton,
+.modal.is-medium > .iconbutton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.modal.is-small .iconbutton .icon,
+.modal.is-medium > .iconbutton .icon {
+  width: 34px;
+  height: 34px;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .modal.is-small {
+    top: 50px;
+    max-width: 600px;
+    height: auto;
+    border-radius: $radius-l;
+  }
+
+  .modal.is-medium {
+    top: 50px;
+    max-width: 800px;
+    height: calc(100vh - 100px);
+    border-radius: $radius-l;
+  }
+}

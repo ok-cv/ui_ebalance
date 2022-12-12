@@ -1,0 +1,35 @@
+@use 'sass:color';
+@import '../common';
+
+.stepindicator2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+    text-align: center;
+    color: $color-gray-2;
+    border-radius: $radius-full;
+    background: $color-gray-4;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    &.is-visited {
+      color: transparent;
+      background: transparent no-repeat center / 20px $svg-input-check-blue;
+    }
+
+    &.is-current {
+      color: $color-white;
+      background: $color-blue-2;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+@use 'sass:color';
+@import '../../common';
+
+/* Floating label pattern */
+
+.input {
+  position: relative;
+
+  > input,
+  > select,
+  > textarea {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid color.scale($color-gray-2, $lightness: 45%);
+    background: transparent;
+  }
+
+  > select {
+    background: no-repeat right center / 16px 12px $svg-select-arrow-black;
+  }
+
+  > input[type='date'] {
+    padding: 9px 0;
+  }
+
+  > input[type='date']::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 30px;
+    border-radius: $radius-s;
+    background: rgb(0 25 50 / 4%) no-repeat center center / 16px 12px $svg-select-arrow-black;
+  }
+
+  > input[type='number']::-webkit-inner-spin-button,
+  > input[type='number']::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: color.scale($color-gray-2, $lightness: 30%);
+    transform-origin: 0 0;
+    transition: opacity $time, transform $time;
+    pointer-events: none;
+
+    > .is-optional {
+      margin-left: 5px;
+      font-size: 12px;
+    }
+  }
+
+  > .per-unit, /* Frontend */
+  > .from-to, /* Backoffice */
+  > .fixed-label /* An alternative name for both, so far unused */
+  {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    font-size: $text-medium;
+    color: color.scale($color-gray-2, $lightness: 30%);
+    pointer-events: none;
+  }
+
+  /* Hide placeholder */
+
+  > input::-webkit-input-placeholder { color: transparent; }
+  > input::-moz-placeholder { color: transparent; }
+  > input::placeholder { color: transparent; }
+
+  /* Animate label */
+
+  > input:not(:-moz-placeholder-shown) ~ label {
+    transform: scale(.8) translateY(-25px);
+  }
+
+  > input:focus ~ label,
+  > input:not(:placeholder-shown) ~ label,
+  > select ~ label {
+    transform: scale(.8) translateY(-25px);
+  }
+
+  > input:-webkit-autofill ~ label {
+    transform: scale(.8) translateY(-25px);
+  }
+
+  /* Textarea */
+
+  > textarea {
+    min-height: 150px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 1px solid color.scale($color-gray-2, $lightness: 45%);
+  }
+
+  > textarea,
+  > textarea + label {
+    padding-left: 10px;
+  }
+
+  > textarea:not(:-moz-placeholder-shown) ~ label {
+    transform: scale(.8) translateY(-34px) translateX(-11px);
+  }
+
+  > textarea:focus ~ label,
+  > textarea:not(:placeholder-shown) ~ label {
+    transform: scale(.8) translateY(-34px) translateX(-11px);
+  }
+
+  > textarea:-webkit-autofill ~ label {
+    transform: scale(.8) translateY(-34px) translateX(-11px);
+  }
+
+  /* Background on :focus */
+
+  > input,
+  > select,
+  > textarea {
+    background-color: transparent;
+    box-shadow: 0 0 0 10px transparent, 0 -9px 0 10px transparent;
+    transition: background-color $time, box-shadow $time;
+  }
+
+  > input:focus,
+  > select:focus,
+  > textarea:focus {
+    background-color: $color-gray-4;
+    box-shadow: 0 0 0 10px $color-gray-4, 0 -9px 0 10px $color-gray-4;
+  }
+}
+
+/* Small stepper buttons */
+
+.input.has-stepper-buttons {
+  width: 120px;
+  margin: 0 10px;
+
+  input {
+    font-family: $font-stack-2;
+    text-align: center;
+  }
+
+  a {
+    position: absolute;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+  }
+
+  a:first-of-type {
+    left: 0;
+    background: no-repeat 50% 50% / 18px 18px $svg-stepper-sm-dec;
+  }
+
+  a:last-of-type {
+    right: 0;
+    background: no-repeat 50% 50% / 18px 18px $svg-stepper-sm-inc;
+  }
+}
+
+/* Large stepper buttons */
+
+.input.has-stepper-buttons.is-large {
+  width: 100%;
+  margin: 0;
+
+  input {
+    padding: 0;
+    font-family: $font-stack-2;
+    font-size: 45px;
+  }
+
+  a {
+    top: 13px;
+    width: 40px;
+    height: 40px;
+  }
+
+  a:first-of-type {
+    background: no-repeat 50% 50% / 40px 40px $svg-stepper-xl-dec;
+  }
+
+  a:last-of-type {
+    background: no-repeat 50% 50% / 40px 40px $svg-stepper-xl-inc;
+  }
+}
+
+/* Small inputs inside centered boxes (e.g. Anamnesis) */
+
+.text-center > .input {
+  width: 80px;
+  margin: 0 20px;
+}
+
+.text-center > .input input {
+  text-align: center;
+}
+
+.text-center > .input .input-error {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+}
+
+/* No label = shorter background */
+
+.text-center > .input,
+.standardcard .input,
+.responsivecard .input,
+.reducedcard .input,
+.input.has-stepper-buttons {
+  input:focus,
+  select:focus {
+    box-shadow: 0 0 0 10px $color-gray-4;
+  }
+}
+
+/* Disabled */
+
+.input > [disabled],
+.input > [disabled] + label {
+  color: $color-gray-1;
+  border-color: color.scale($color-gray-1, $lightness: 40%);
+  opacity: .3;
+}
+
+/* Docs Demo */
+
+.docs-state {
+  margin-bottom: $spacing-2;
+  font-size: $text-small;
+  text-transform: uppercase;
+  color: $color-breakfast;
+}

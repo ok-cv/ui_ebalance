@@ -1,0 +1,61 @@
+@use 'sass:color';
+@import '../../common';
+
+.tag {
+  position: relative;
+  display: inline-block;
+  margin: 0 $spacing-1 $spacing-1 0;
+  font-size: $text-medium;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .label {
+    position: relative;
+    padding: 3px 10px 4px;
+    color: $color-gray-2;
+    border-radius: $radius-full;
+    background: $color-gray-4;
+    transition: $time;
+  }
+
+  .label::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: no-repeat 0 0 / 12px 12px url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#{replace-hashtag(#{$color-white})}" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"></path></svg>');
+    transition: $time;
+    opacity: 0;
+  }
+
+  input:checked ~ .label {
+    padding-left: 15px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: $color-white;
+    background: $color-blue-2;
+  }
+
+  input:checked ~ .label::after {
+    opacity: 1;
+  }
+
+  &.is-static {
+    cursor: default;
+  }
+
+  &.is-static .label {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: $color-white;
+    background: $color-blue-2;
+  }
+}

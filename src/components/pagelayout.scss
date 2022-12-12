@@ -1,0 +1,60 @@
+@use 'sass:color';
+@import '../common';
+
+.pagecircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  @include ebalance-background();
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-size: 100% 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 30" preserveAspectRatio="none"><path d="M 0 0 Q 100 40 200 0 L 200 40 L 0 40 Z" fill="#{replace-hashtag(#{$color-white})}"/></svg>');
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    position: relative;
+    flex: 1;
+    padding: 50px 0 100px;
+
+    &.is-sm-circle {
+      padding-top: 60px;
+
+      > .pagecircle {
+        height: 35px;
+      }
+    }
+
+    &.is-xl-circle {
+      padding-top: 10px;
+
+      > .pagecircle {
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .page {
+    main {
+      &.is-sm-circle {
+        padding-top: 90px;
+      }
+    }
+  }
+}

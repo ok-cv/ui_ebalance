@@ -1,0 +1,606 @@
+const ComponentsOverview = `
+
+<vue-template>
+
+  <div class="py-6">
+    <div class="container">
+
+      <h1>Components</h1>
+
+      <div class="my-6">
+        <div class="header" style="position: relative; z-index: 9;">
+          <div class="inner">
+            <a><img src="dist/img/logo-white.svg"></a>
+            <nav>
+              <ul>
+                <li>
+                  <div class="is-active"><div class="has-subnav">Nav Item</div></div>
+                  <ul class="nav-subnav">
+                    <li><a>Sub Nav Item</a></li>
+                    <li><a class="is-active">Sub Nav Item</a></li>
+                    <li><a>Sub Nav Item</a></li>
+                  </ul>
+                </li>
+                <li><a>Nav Item</a></li>
+                <li><a>Nav Item</a></li>
+                <li><a>Nav Item</a></li>
+                <li>
+                  <div>
+                    <div class="has-subnav">Hello, Alexandra!</div>
+                    <div class="nav-photo"></div>
+                  </div>
+                  <ul class="nav-subnav">
+                    <li><a>Sub Nav Item</a></li>
+                    <li><a class="is-active">Sub Nav Item</a></li>
+                    <li><a>Sub Nav Item</a></li>
+                  </ul>
+                </li>
+                <li class="offcanvas-toggle"><svg viewBox="0 0 100 100"><path d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/><path d="m 70,50 h -40"/><path d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/></svg></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-2">
+                <h3 class="mb-2">Headline</h3>
+                <ul class="text-small">
+                  <li><a>Menu Item</a></li>
+                  <li><a>Menu Item</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-2">
+                <h3 class="mb-2">Headline</h3>
+                <ul class="text-small">
+                  <li><a>Menu Item</a></li>
+                  <li><a>Menu Item</a></li>
+                  <li><a>Menu Item</a></li>
+                  <li><a>Menu Item</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg">
+                <h3 class="mb-2">Headline</h3>
+                <ul class="text-small">
+                  <li><a>Menu Item</a></li>
+                  <li><a>Menu Item</a></li>
+                  <li><a>Menu Item</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-auto">
+                <div class="d-flex justify-content-center">
+                  <a>
+                    <div class="icon icon-socialinstagram-gray-2"></div>
+                  </a>
+                  <a class="mx-3">
+                    <div class="icon icon-socialfacebook-gray-2"></div>
+                  </a>
+                  <a>
+                    <div class="icon icon-socialyoutube-gray-2"></div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img src="dist/img/logo-gray.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="bg-blue-2 my-6 p-4">
+        <div class="progresscircle2-wrapper">
+          <div class="progresscircle2-wings">
+            550
+            <span>gegessen</span>
+          </div>
+          <div class="progresscircle2-main">
+            <div class="progresscircle2-main-inner">
+              1950
+              <span>kcal übrig</span>
+            </div>
+            <svg class="circle">
+              <circle r="74" cx="80" cy="80" stroke-width="5" stroke-dasharray="500" stroke-dashoffset="330"></circle>
+            </svg>
+          </div>
+          <div class="progresscircle2-wings">
+            100
+            <span>verbrannt</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-2 my-6 p-4">
+        <div class="d-flex justify-content-between">
+          <div class="progressbar">
+            Kohlenhy. 50%
+            <div class="progressbar-bar">
+              <div class="progressbar-bar-percent" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div class="progressbar">
+            Protein 30%
+            <div class="progressbar-bar">
+              <div class="progressbar-bar-percent" style="width: 30%;"></div>
+            </div>
+          </div>
+          <div class="progressbar">
+            Fett 10%
+            <div class="progressbar-bar">
+              <div class="progressbar-bar-percent" style="width: 10%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="stepindicator2">
+          <div class="is-current">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="datepicker2-nav-wrapper">
+          <div class="datepicker2-nav">
+            <a class="iconbutton">
+              <div class="icon icon-arrowleft-gray-2"></div>
+            </a>
+            <div class="datepicker2-nav-text">
+              Today, June 30
+            </div>
+            <a class="iconbutton">
+              <div class="icon icon-arrowright-gray-2"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <div class="journalentrypane is-search">
+          <div class="icon icon-search-blue-2"></div>
+          <span class="text-bold">Mahlzeit oder Aktivität mit der Suche hinzufügen</span>
+        </div>
+      </div>
+
+      <div class="my-2">
+        <div class="journalentrypane">
+          <div class="icon icon-utensils-gray-1"></div>
+          <span>Mahlzeit ohne Suche eintragen</span>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <div class="journalentrypane">
+          <div class="icon icon-weight-gray-1"></div>
+          <span>Aktivität ohne Suche eintragen</span>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="dist/img/demo/salad-1.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+            <ul class="standardcard-dropdown">
+              <li><a>Editieren</a></li>
+              <li><a>Favorisieren</a></li>
+              <li><a>Löschen</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="dist/img/demo/salad-2.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+          </div>
+        </div>
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="dist/img/demo/salad-3.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+          </div>
+        </div>
+        <div class="standardcard is-menuplan">
+          <div class="standardcard-image">
+            <img src="dist/img/demo/salad-4.jpg">
+            <div class="standardcard-label">
+              Menüplan
+            </div>
+          </div>
+          <div class="standardcard-content">
+            eBalance Menuplan Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-replace-gray-2"></div>
+            </a>
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="search-headline">Meine Nahrungsmittel <span>3 Einträge gefunden</span></div>
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="dist/img/demo/salad-3.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <button class="btn is-tiny">Button</button>
+          </div>
+          <div class="standardcard-options">
+            <div>
+              <div class="foodamount">
+                <div class="input">
+                  <input type="text" value="100">
+                </div>
+                <select class="unitpicker">
+                  <option selected>g</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="input">
+                <select>
+                  <option selected>Type</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="input">
+                <select>
+                  <option selected>Time</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="gaugegoal">
+              <img src="dist/img/placeholder-gaugegoal-1.png">
+              <div class="gaugegoal-values"><div>Start: 85 kg</div><div>Ziel: 70 kg</div></div>
+              <div class="gaugegoal-current">80.5 kg</div>
+              <div class="gaugegoal-current-text">Mein aktuelles Gewicht</div>
+              <div class="gaugegoal-percent">30%</div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="gaugegoal is-over-40 is-over-60">
+              <img src="dist/img/placeholder-gaugegoal-2.png">
+              <div class="gaugegoal-values"><div>Start: 85 kg</div><div>Ziel: 70 kg</div></div>
+              <div class="gaugegoal-current">74.5 kg</div>
+              <div class="gaugegoal-current-text">Mein aktuelles Gewicht</div>
+              <div class="gaugegoal-percent">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="mb-4">
+          <div class="docs-classnames">
+            <code>badge</code>
+          </div>
+        </div>
+        <div class="badge is-success">
+          -15%
+        </div>
+        <div class="badge is-error">
+          -15%
+        </div>
+        <div class="badge is-warning">
+          -15%
+        </div>
+        <div class="badge is-info">
+          -15%
+        </div>
+        <div class="badge is-placeholder">
+          -15%
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>table</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Lorem</th>
+                  <th>Ipsum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lorem ipsum dolor</td>
+                  <td>2000 kcal</td>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum dolor</td>
+                  <td>500 kcal</td>
+                </tr>
+                <tr>
+                  <td>Lorem ipsum dolor</td>
+                  <td>30 kcal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>table</code> & <code>is-invoice</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table is-invoice">
+              <tbody>
+                <tr>
+                  <td>3 Monate</td>
+                  <td>CHF 90.00</td>
+                </tr>
+                <tr>
+                  <td>Rabattcode</td>
+                  <td>CHF -15.74</td>
+                </tr>
+                <tr>
+                  <td>Gesamtsumme</td>
+                  <td>CHF 74.26</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>table</code> & <code>is-recipe</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table is-recipe">
+              <thead>
+                <tr>
+                  <th>Lorem</th>
+                  <th>Ipsum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>100 g</td>
+                  <td>Lorem ipsum dolor</td>
+                </tr>
+                <tr>
+                  <td>20 g</td>
+                  <td>Lorem ipsum dolor</td>
+                </tr>
+                <tr>
+                  <td>1 TL</td>
+                  <td>Lorem ipsum dolor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>table</code> & <code>is-nutrition</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table is-nutrition">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th>Lorem</th>
+                  <th>Ipsum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="table-nutrition-indicator" style="background: #304050;"></div></td>
+                  <td>Lorem ipsum</td>
+                  <td>5000</td>
+                  <td>5000</td>
+                </tr>
+                <tr>
+                  <td><div class="table-nutrition-indicator" style="background: #304050;"></div></td>
+                  <td>Lorem ipsum</td>
+                  <td>5000</td>
+                  <td>5000</td>
+                </tr>
+                <tr>
+                  <td><div class="table-nutrition-indicator" style="background: #304050;"></div></td>
+                  <td>Lorem ipsum</td>
+                  <td>5000</td>
+                  <td>5000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>table</code> & <code>is-striped</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th>Lorem Ipsum</th>
+                  <th>Lorem Ipsum</th>
+                  <th>Lorem Ipsum</th>
+                  <th>Lorem Ipsum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                </tr>
+                <tr>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                  <td>Lorem Ipsum Dolor Sit Amet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>infopanel</code>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="infopanel is-info">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatum magni eius recusandae repellendus nobis culpa.</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatum magni eius recusandae repellendus nobis culpa.</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>infopanel</code> & <code>is-gift</code>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="infopanel is-gift">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatum magni eius recusandae repellendus nobis culpa.</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatum magni eius recusandae repellendus nobis culpa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>infoparagraph</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="infoparagraph">
+              <div class="icon icon-bmi-gray-1"></div>
+              <h2>Headline</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat placeat, fugiat aliquam ea error. Reiciendis necessitatibus, explicabo neque pariatur! Iure libero repudiandae enim omnis dicta, nobis dignissimos voluptates pariatur magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia repellendus incidunt ducimus reprehenderit consequatur cumque dolorum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>infoplaceholder</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="infoplaceholder">
+              <div class="icon icon-search-gray-2"></div>
+              <h2>Headline</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat placeat, fugiat aliquam ea error. Reiciendis necessitatibus, explicabo neque pariatur! Iure libero repudiandae enim omnis dicta, nobis dignissimos voluptates pariatur magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officia repellendus incidunt ducimus reprehenderit consequatur cumque dolorum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>panel</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate perspiciatis quae hic, fuga veniam debitis similique maiores explicabo quibusdam, laudantium quaerat facere eum eveniet esse alias exercitationem itaque aliquid.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate perspiciatis quae hic, fuga veniam debitis similique maiores explicabo quibusdam, laudantium quaerat facere eum eveniet esse alias exercitationem itaque aliquid.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate perspiciatis quae hic, fuga veniam debitis similique maiores explicabo quibusdam, laudantium quaerat facere eum eveniet esse alias exercitationem itaque aliquid.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <div class="docs-classnames">
+              <code>divider</code>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="divider"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</vue-template>
+
+`;

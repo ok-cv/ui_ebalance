@@ -1,0 +1,66 @@
+@use 'sass:color';
+@import '../common';
+
+.progresscircle2-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+
+  > .progresscircle2-wings {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-stack-2;
+    font-size: 22px;
+    color: #fff;
+
+    > span {
+      @include font-style-upper-small();
+    }
+  }
+
+  > .progresscircle2-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+
+    > .progresscircle2-main-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+      font-family: $font-stack-2;
+      font-size: 45px;
+      color: #fff;
+      border-radius: $radius-full;
+      border: 2px solid rgb(255 255 255 / 20%);
+
+      > span {
+        @include font-style-upper-small();
+      }
+    }
+
+    > svg.circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      width: 160px;
+      height: 160px;
+      stroke: #fff;
+      fill: transparent;
+      stroke-linecap: round;
+    }
+  }
+}
+
+.progresscircle2-wrapper + div .progressbar {
+  @include font-style-upper-small();
+}

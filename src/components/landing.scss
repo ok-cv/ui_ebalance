@@ -1,0 +1,118 @@
+@use 'sass:color';
+@import '../common';
+
+.landing-title2 {
+  font-size: 26px;
+  text-align: center;
+  color: #fff;
+}
+
+.landing-title2 + img {
+  width: 70%;
+  margin: auto;
+}
+
+.landing-subtitle2 {
+  font-size: 18px;
+  text-align: center;
+  color: #222;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .landing-title2 {
+    margin: 0 -50px;
+    font-size: 32px;
+  }
+
+  .landing-title2 + img {
+    width: 50%;
+    margin-bottom: -20px;
+  }
+}
+
+.page .py-6 img { // SUPER HACKY
+  mix-blend-mode: multiply;
+}
+
+
+
+
+
+
+.sticker {
+  position: absolute;
+  top: 450px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  border-radius: 1000px;
+  transform: rotate(8deg);
+  border: 7px solid #fff;
+  background:
+    linear-gradient(320deg, transparent 50%, rgb(255 255 255 / 8%) 50%),
+    linear-gradient($color-safe, color.scale($color-safe, $lightness: -20%));
+  box-shadow: $global-shadow, 0 0 0 7px rgb(0 20 40 / 5%);
+
+  top: 198px;
+  right: -22px;
+  left: auto;
+  transform: scale(.7) rotate(8deg);
+
+  > div {
+    &:nth-child(1) {
+      margin-top: -20px;
+      font-size: 18px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      margin-bottom: 8px;
+      font-size: 40px;
+      font-weight: 700;
+
+      i {
+        position: absolute;
+        top: 0;
+        right: -11px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+
+    &:nth-child(4) {
+      font-size: 22px;
+    }
+
+    > span {
+      font-size: 60%;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .sticker {
+    top: 230px;
+    left: 600px;
+    right: auto;
+
+    top: 155px;
+    right: -10px;
+    left: auto;
+    transform: scale(.8) rotate(8deg);
+  }
+}

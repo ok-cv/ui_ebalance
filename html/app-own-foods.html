@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Own Foods</title>
+
+  <link rel="stylesheet" href="../dist/css/index.min.css">
+
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <div class="inner">
+        <a><img src="../dist/img/logo-white.svg"></a>
+        <nav>
+          <ul>
+            <li><a>Nav Item</a></li>
+            <li><div class="is-active"><div class="has-subnav">Nav Item</div></div></li>
+            <li><a>Nav Item</a></li>
+            <li><a>Nav Item</a></li>
+            <li><a>Nav Item</a></li>
+            <li><div><div class="has-subnav">Hello, Alexandra!</div><div class="nav-photo"></div></div></li>
+            <li class="offcanvas-toggle"><svg viewBox="0 0 100 100"><path d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/><path d="m 70,50 h -40"/><path d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/></svg></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <main class="is-sm-circle">
+      <div class="pagecircle"></div>
+
+      <div class="container max-700">
+
+        <h1>Mein Essen</h1>
+        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, tempora. Quas, veniam odio dicta dolores consequatur tempora facere aperiam maxime cum officia ducimus natus doloribus! Molestiae dicta veritatis eaque quas?</p>
+
+        <div class="standardcard-sectiontitle mt-3 mb-1">
+          <span>Nahrungsmittel</span>
+        </div>
+
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="../dist/img/demo/salad-1.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+            <ul class="standardcard-dropdown">
+              <li><a>Editieren</a></li>
+              <li><a>Favorisieren</a></li>
+              <li><a>Löschen</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="../dist/img/demo/salad-2.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+            <ul class="standardcard-dropdown hidden">
+              <li><a>Editieren</a></li>
+              <li><a>Favorisieren</a></li>
+              <li><a>Löschen</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="../dist/img/demo/salad-3.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Food
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+            <ul class="standardcard-dropdown hidden">
+              <li><a>Editieren</a></li>
+              <li><a>Favorisieren</a></li>
+              <li><a>Löschen</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="standardcard-sectiontitle mt-3 mb-1">
+          <span>Rezepte</span>
+        </div>
+
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="../dist/img/demo/salad-4.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Recipe
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+            <ul class="standardcard-dropdown hidden">
+              <li><a>Editieren</a></li>
+              <li><a>Favorisieren</a></li>
+              <li><a>Löschen</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="standardcard">
+          <div class="standardcard-image">
+            <img src="../dist/img/demo/salad-5.jpg">
+          </div>
+          <div class="standardcard-content">
+            My Own Custom Recipe
+            <span>500 kcal</span>
+          </div>
+          <div class="standardcard-icons">
+            <a class="iconbutton">
+              <div class="icon icon-menuv-gray-2"></div>
+            </a>
+            <ul class="standardcard-dropdown hidden">
+              <li><a>Editieren</a></li>
+              <li><a>Favorisieren</a></li>
+              <li><a>Löschen</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="../dist/js/header.js"></script>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+
+    const icons = $$('.standardcard-icons .iconbutton')
+
+    icons.forEach((cur) => {
+      cur.addEventListener('click', () => {
+        cur.parentNode.querySelector('.standardcard-dropdown').classList.toggle('hidden')
+      })
+    })
+  </script>
+
+</body>
+</html>

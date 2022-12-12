@@ -1,0 +1,29 @@
+@use 'sass:color';
+@import '../common';
+
+.liquids {
+  > .liquids-icons {
+    display: flex;
+    margin: 10px -5px 0;
+
+    > .iconpane {
+      position: relative;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover {
+        border-radius: $radius-s;
+        background: $color-gray-4;
+      }
+
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+
+      > .icon {
+        width: 29px;
+        height: 29px;
+      }
+    }
+  }
+}

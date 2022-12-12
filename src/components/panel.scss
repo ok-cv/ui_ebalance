@@ -1,0 +1,34 @@
+@use 'sass:color';
+@import '../common';
+
+.panel {
+  position: relative;
+  background: $color-white;
+  overflow: hidden;
+}
+
+.panel + .panel {
+  margin-top: $spacing-4;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .panel {
+    padding: $spacing-4;
+    border-radius: $radius-l;
+    box-shadow: $global-shadow;
+  }
+
+  .col-lg-6 .panel {
+    height: 100%;
+  }
+
+  .equal-masse-panel {
+    height: 420px;
+  }
+}
+
+.equal-masse-panel {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-gray-4;
+}

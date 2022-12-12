@@ -1,0 +1,121 @@
+@use 'sass:color';
+@import '../common';
+
+* {
+  line-height: calc(0.86rem + 0.74em); /* Dynamic line-height based on font-size */
+}
+
+body {
+  font-family: $font-stack-1;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 300;
+
+  > strong {
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.page h4 {
+  margin-top: 40px;
+}
+
+h5,
+h6 {
+  font-size: 14px;
+}
+
+/* Text Styles */
+
+.text-tiny   { 
+  font-size: $text-tiny !important; 
+  font-weight: 100; 
+}
+
+.text-small   { font-size: $text-small;   }
+.text-medium  { font-size: $text-medium;  }
+.text-default { font-size: $text-default; }
+.text-button  { font-size: $text-medium;  } /* only 1x in keycloak */
+
+.text-bold    { font-weight: 600; }
+
+.text-left   { text-align: left   !important; }
+.text-right  { text-align: right  !important; }
+.text-center { text-align: center !important; }
+
+ul {
+  list-style: none;
+}
+
+ol,
+article > ul,
+ul.text-list {
+  list-style: unset;
+  margin-left: 20px;
+}
+
+article > * + *,
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6,
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: 60px;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p,
+p + p {
+  margin-top: 30px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+article > ul,
+ul.text-list,
+.reducedcard-title,
+.reducedcard-calories,
+.responsivecard-title,
+.cookiebanner p,
+.header .header-banner p,
+.panepicker-description,
+.label-left,
+.label-right,
+.input-error,
+.bo-modal p
+{
+  @include crop-whitespace(7, 7);
+}

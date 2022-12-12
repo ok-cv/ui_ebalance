@@ -1,0 +1,14 @@
+@use 'sass:color';
+@import '../../common';
+
+.input-error {
+  display: block;
+  margin-top: 15px;
+  font-size: $text-small;
+  color: $color-danger;
+}
+
+.card .input-error {
+  position: absolute;
+  white-space: nowrap;
+}

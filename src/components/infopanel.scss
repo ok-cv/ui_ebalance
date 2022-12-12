@@ -1,0 +1,29 @@
+@use 'sass:color';
+@import '../common';
+
+.infopanel {
+  padding: 25px;
+  font-size: $text-medium;
+  border-radius: $radius-s;
+  background: $color-gray-4;
+
+  &.is-gift {
+    position: relative;
+    padding-left: 80px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -60px;
+      width: 125px;
+      height: 150px;
+      transform: translateY(-50%);
+      background: no-repeat center center / auto 130px url('../img/undraw/gift.svg');
+    }
+  }
+
+  > p + p {
+    margin-top: $spacing-2;
+  }
+}

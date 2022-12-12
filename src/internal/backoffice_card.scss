@@ -1,0 +1,73 @@
+@use 'sass:color';
+@import '../common';
+
+.bo-card {
+  $card: color.scale($color-gray-3, $lightness: -8%);
+
+  border-radius: $radius-s;
+  background: $color-white;
+  box-shadow: 0 1px 3px 0 $card, 0 0 0 1px $card;
+
+  > .bo-card-head {
+    padding: $spacing-3;
+    border-radius: $radius-s $radius-s 0 0;
+    border-bottom: 1px solid $card;
+  }
+
+  > .bo-card-body {
+    padding: $spacing-3;
+    border-radius: 0 0 $radius-s $radius-s;
+  }
+
+  &.is-hex {
+    > .bo-card-body {
+      padding: 15px;
+
+      .js-read-color {
+        width: 90px;
+        height: 90px;
+        border-radius: $radius-s;
+      }
+
+      .text-right {
+        font-family: Menlo, monospace;
+        font-size: $text-small;
+        white-space: nowrap;
+        color: $color-gray-2;
+      }
+
+      .js-write-color {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: $color-gray-1;
+      }
+    }
+  }
+
+  &.is-page {
+    > .bo-card-head {
+      padding: 5px;
+
+      > .bo-card-iframe {
+        display: block;
+        height: 200px;
+        overflow: hidden;
+
+        > iframe {
+          width: 333%;
+          height: 333%;
+          border: 0;
+          transform: scale(.3, .3);
+          transform-origin: top left;
+          pointer-events: none;
+        }
+      }
+    }
+  
+    > .bo-card-body {
+      padding: 15px;
+      font-size: $text-medium;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,419 @@
+@use 'sass:color';
+@import '../common';
+
+/* Header Structure and Blue Theme
+ * ========================================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  @include ebalance-background();
+
+  &.is-scrolled {
+    box-shadow: $global-shadow;
+  }
+
+  > .header-banner {
+    padding: 15px;
+    text-align: center;
+    color: #736100;
+    background: #ffec8e;
+
+    > p {
+      font-size: $text-small;
+      font-weight: 600;
+    }
+  }
+
+  > .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    height: 65px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    > a {
+      > img[src*='logo'] {
+        height: 25px;
+      }
+    }
+
+    > nav {
+      height: 100%;
+
+      > ul {
+        display: flex;
+        height: 100%;
+
+        > li {
+          position: relative;
+
+          > a,
+          > div {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 15px;
+            font-size: $text-medium;
+            color: $color-white;
+
+            &.is-active,
+            &.router-link-active {
+              background: rgb(0 25 50 / 6%);
+            }
+          }
+
+          > div {
+            cursor: default;
+
+            > .has-subnav {
+              padding-right: 20px;
+              background: no-repeat right -3px top 2px / 13px 13px $svg-header-arrow-white;
+            }
+
+            > .nav-photo {
+              width: 55px;
+              height: 55px;
+              margin-left: 12px;
+              border-radius: $radius-full;
+              border: 2px solid $color-white;
+              background: no-repeat 1px 1px / 49px 49px url('../img/undraw/profile.svg');
+
+              > img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: $radius-full;
+              }
+            }
+          }
+
+          > ul.nav-subnav {
+            display: none;
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 50%;
+            z-index: 1;
+            transform: translateX(-50%);
+            width: 220px;
+            padding: 5px;
+            border-radius: $radius-s;
+            background: $color-white;
+            box-shadow: 0 5px 10px rgb(0 25 50 / 3%);
+            filter: drop-shadow(0 0 1px rgb(0 25 50 / 20%));
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: calc(50% - 4px);
+              bottom: 100%;
+              display: block;
+              width: 0;
+              height: 0;
+              border: 8px solid transparent;
+              border-bottom-color: $color-white;
+            }
+
+            > li {
+              border-radius: calc(#{$radius-s} - 2px);
+
+              > a {
+                display: block;
+                padding: 12px 15px;
+                font-size: $text-medium;
+
+                &.is-active,
+                &.router-link-active {
+                  border-radius: $radius-s;
+                  background: $color-gray-4;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            > ul.nav-subnav {
+              display: block;
+            }
+          }
+
+          &.offcanvas-toggle {
+            transform: translateX(20px);
+            overflow: hidden;
+            cursor: pointer;
+
+            > svg {
+              width: 65px;
+              transition: transform $time;
+
+              > path {
+                fill: none;
+                stroke: $color-white;
+                stroke-width: 3;
+                stroke-linecap: round;
+                transition: stroke-dasharray $time, stroke-dashoffset $time;
+
+                &:nth-child(1) { stroke-dasharray: 40 121; }
+                &:nth-child(3) { stroke-dasharray: 40 121; }
+              }
+            }
+
+            &.is-open {
+              > svg {
+                transform: rotate(45deg);
+  
+                > path {
+                  &:nth-child(1) { stroke-dashoffset: -68px; }
+                  &:nth-child(3) { stroke-dashoffset: -68px; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Header White Theme
+ * ========================================================================== */
+
+.header.is-white {
+  background: $color-white;
+  box-shadow: 0 0 0 1px $color-gray-3;
+
+  &.is-scrolled {
+    box-shadow: 0 2px 4px rgb(0 25 50 / 20%);
+  }
+
+  > .inner {
+    > a {
+      &.text-logo {
+        display: block;
+        padding: 4px 0 5px 40px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: no-repeat 0 2px / 26px 26px url('../img/vue-icon.svg');      
+      }
+    }
+
+    > nav {
+      > ul {
+        > li {
+          > a,
+          > div {
+            font-size: $text-small;
+            font-weight: 600;
+            color: unset;
+            text-transform: uppercase;
+
+            &.is-active,
+            &.router-link-active {
+              background: $color-gray-4;
+            }
+          }
+
+          > div {
+            > .has-subnav {
+              background: no-repeat right -3px top 0 / 13px 13px $svg-header-arrow-black;
+            }
+          }
+
+          > ul.nav-subnav {
+            > li {
+              > a {
+                font-size: $text-small;
+                font-weight: 600;
+                text-transform: uppercase;
+              }
+            }
+          }
+
+          &.offcanvas-toggle {
+            > svg {
+              > path {
+                stroke: $color-gray-1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Header Black Theme
+ * ========================================================================== */
+
+.header.is-black {
+  position: static;
+  background: hsl(210deg 10% 25%);
+
+  > .inner {
+    max-width: unset;
+    padding: 0 50px;
+
+    > a {
+      &.text-logo {
+        display: block;
+        padding: 4px 0 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-white;
+      }
+    }
+
+    > nav {
+      > ul {
+        > li {
+          > a,
+          > div {
+            font-size: $text-small;
+            font-weight: 600;
+
+            &.is-active,
+            &.router-link-active {
+              background: rgb(0 0 0 / 30%);
+            }
+          }
+
+          > div {
+            > .has-subnav {
+              background: no-repeat right -3px top 0 / 13px 13px $svg-header-arrow-white;
+            }
+          }
+
+          > ul.nav-subnav {
+            > li {
+              > a {
+                font-size: $text-small;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Offcanvas Structure
+ * ========================================================================== */
+
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: $color-white;
+  transform: translateX(-100%);
+  transition: $time;
+
+  &.is-open {
+    box-shadow: 2px 0 4px rgb(0 25 50 / 20%);
+    transform: translateX(0);
+  }
+
+  > .inner {
+    height: 100%;
+
+    > nav {
+      height: 100%;
+
+      > ul {
+        height: 100%;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        > li {
+          border-bottom: 1px solid $color-gray-3;
+
+          > a,
+          > div {
+            display: block;
+            padding: 15px 30px;
+            font-size: $text-medium;
+            text-transform: uppercase;
+
+            &.is-active,
+            &.router-link-active {
+              font-weight: 600;
+              background: $color-gray-4;
+            }
+          }
+
+          > ul {
+            border-top: 1px dotted $color-gray-3;
+
+            > li {
+              > a {
+                display: block;
+                padding: 15px 65px;
+                font-size: $text-medium;
+                background: no-repeat 30px 15px / 18px 18px $svg-offcanvas-subdirectory;
+
+                &.is-active,
+                &.router-link-active {
+                  font-weight: 600;
+                  background-color: $color-gray-4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .filter-sidebar {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Toggle Hamburger Visibility
+ * ========================================================================== */
+
+.header {
+  > .inner {
+    > nav {
+      > ul {
+        > li {
+          &:not(.offcanvas-toggle) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .header {
+    > .inner {
+      > nav {
+        > ul {
+          > li {
+            &:not(.offcanvas-toggle) {
+              display: block;
+            }
+
+            &.offcanvas-toggle {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

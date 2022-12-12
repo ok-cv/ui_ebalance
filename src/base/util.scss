@@ -1,0 +1,86 @@
+@use 'sass:color';
+@import '../common';
+
+.is-disabled {
+  opacity: .5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.truncate-id {
+  display: block;
+  width: 110px;
+  padding-right: 10px;
+  font-family: Menlo, monospace;
+  font-size: 12px;
+  color: $color-gray-2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  resize: horizontal;
+}
+
+.rounded-s { border-radius: $radius-s !important; }
+.rounded-l { border-radius: $radius-l !important; }
+
+@media (min-width: $breakpoint-lg) {
+  .order-lg-last {
+    order: 13;
+  }
+}
+
+/* Text Colors */
+
+.text-gray-1    { color: $color-gray-1    !important; }
+.text-gray-2    { color: $color-gray-2    !important; }
+.text-gray-3    { color: $color-gray-3    !important; }
+.text-gray-4    { color: $color-gray-4    !important; }
+.text-white     { color: $color-white     !important; }
+
+.text-blue-1    { color: $color-blue-1    !important; }
+.text-blue-2    { color: $color-blue-2    !important; }
+
+.text-protein   { color: $color-protein   !important; }
+.text-carbs     { color: $color-carbs     !important; }
+.text-fat       { color: $color-fat       !important; }
+.text-alcohol   { color: $color-alcohol   !important; }
+
+.text-breakfast { color: $color-breakfast !important; }
+.text-lunch     { color: $color-lunch     !important; }
+.text-dinner    { color: $color-dinner    !important; }
+.text-snack     { color: $color-snack     !important; }
+
+.text-clickable { color: $color-clickable !important; }
+.text-warning   { color: $color-warning   !important; }
+.text-danger    { color: $color-danger    !important; }
+.text-safe      { color: $color-safe      !important; }
+
+/* Background Colors */
+
+.bg-gray-1    { background: $color-gray-1    !important; }
+.bg-gray-2    { background: $color-gray-2    !important; }
+.bg-gray-3    { background: $color-gray-3    !important; }
+.bg-gray-4    { background: $color-gray-4    !important; }
+.bg-white     { background: $color-white     !important; }
+
+.bg-blue-1    { background: $color-blue-1    !important; }
+.bg-blue-2    { background: $color-blue-2    !important; }
+
+.bg-protein   { background: $color-protein   !important; }
+.bg-carbs     { background: $color-carbs     !important; }
+.bg-fat       { background: $color-fat       !important; }
+.bg-alcohol   { background: $color-alcohol   !important; }
+
+.bg-breakfast { background: $color-breakfast !important; }
+.bg-lunch     { background: $color-lunch     !important; }
+.bg-dinner    { background: $color-dinner    !important; }
+.bg-snack     { background: $color-snack     !important; }
+
+.bg-clickable { background: $color-clickable !important; }
+.bg-warning   { background: $color-warning    !important; }
+.bg-danger    { background: $color-danger    !important; }
+.bg-safe      { background: $color-safe      !important; }

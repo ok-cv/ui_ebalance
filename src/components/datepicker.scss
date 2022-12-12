@@ -1,0 +1,41 @@
+@use 'sass:color';
+@import '../common';
+
+.datepicker2-nav-wrapper {
+  position: relative;
+  max-width: 200px;
+  margin: auto;
+  border-radius: $radius-s;
+  background: $color-gray-4;
+
+  .datepicker2-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 14px;
+    color: $color-gray-2;
+
+    > .iconbutton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: $radius-s 0 0 $radius-s;
+
+      &:last-child {
+        border-radius: 0 $radius-s $radius-s 0;
+      }
+
+      &:hover {
+        background: $color-gray-3;
+      }
+    }
+
+    > .datepicker2-nav-text {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}

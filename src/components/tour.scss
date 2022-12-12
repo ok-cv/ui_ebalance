@@ -1,0 +1,21 @@
+@use 'sass:color';
+@import '../common';
+
+.tour-wrapper {
+  position: relative;
+
+  * {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .tour-marker {
+    position: absolute;
+    z-index: 9;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid red;
+    box-shadow: 0 0 0 8px rgb(255 0 0 / 10%);
+  }
+}

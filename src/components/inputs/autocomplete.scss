@@ -1,0 +1,160 @@
+@use 'sass:color';
+@import '../../common';
+
+.autocomplete-dropdown {
+  position: relative;
+  border-radius: 0 0 $radius-s $radius-s;
+  background: $color-white;
+  box-shadow: 0 5px 10px rgb(0 25 50 / 3%);
+  filter: drop-shadow(0 0 1px rgb(0 25 50 / 20%));
+  overflow: hidden;
+
+  li {
+    position: relative;
+    padding: 10px 15px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray-3;
+    }
+
+    &:hover,
+    &.is-suggested {
+      background: $color-gray-4;
+      cursor: pointer;
+    }
+  }
+}
+
+.autocomplete-suggestion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inlinesearch-dropdown {
+  position: relative;
+  height: 245px;
+  border-radius: 0 0 $radius-s $radius-s;
+  background: $color-white;
+  box-shadow: 0 5px 10px rgb(0 25 50 / 3%);
+  filter: drop-shadow(0 0 1px rgb(0 25 50 / 20%));
+  overflow-y: scroll;
+
+  li {
+    position: relative;
+    padding: 10px 15px;
+
+    * {
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray-3;
+    }
+
+    &:hover {
+      background: $color-gray-4;
+      cursor: pointer;
+    }
+
+    span[class*='icon-'] {
+      position: absolute;
+      top: 13px;
+      right: 15px;
+      width: 18px;
+      height: 18px;
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+    }
+
+    .icon-add { background-image: $svg-dropdown-add; }
+    .icon-added { background-image: $svg-dropdown-added; }
+    .icon-remove { background-image: $svg-dropdown-remove; }
+  }
+}
+
+
+
+
+
+
+
+
+
+.inlinesearch-items {
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray-3;
+    }
+
+    .item-name {
+      flex: 1;
+    }
+
+    .foodamount {
+      width: 140px;
+      margin: 0 20px;
+      padding: 0 8px;
+      border-radius: $radius-s;
+      background: $color-gray-4;
+
+      input {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border: 0;
+        transition: none;
+
+        &:focus {
+          box-shadow: 0 0 0;
+        }
+      }
+
+      .unitpicker {
+        top: 8px;
+        right: 8px;
+        width: 60px;
+      }
+    }
+
+    span[class*='icon-'] {
+      width: 18px;
+      height: 18px;
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .icon-remove { background-image: $svg-dropdown-remove; }
+  }
+}

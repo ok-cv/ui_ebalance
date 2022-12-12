@@ -1,0 +1,101 @@
+const Layout = `
+
+<vue-template>
+
+  <div class="py-6">
+    <div class="container">
+
+      <h1>Layout</h1>
+
+      <h2 class="mt-6 mb-4">Breakpoints</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <p>
+            The responsive grid is based on Flexbox. You can use <code>-sm-</code>,
+            <code>-md-</code>, <code>-lg-</code> and <code>-xl-</code> to trigger
+            breakpoints.
+          </p>
+          <p>
+            Columns must always be direct and the only children of rows.
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <code>&lt;div class="row"&gt;<br>&nbsp;&nbsp;&lt;div class="col-12"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="col-12 col-lg-4"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="col-12 col-md-6 col-lg-4"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="col-12 col-md-6 col-lg-4"&gt;&lt;/div&gt;<br>&lt;/div&gt;</code>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Grid</h2>
+
+      <div class="row">
+        <div class="col-12">
+          <p>
+            The standard gutter is 40px.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12"><div class="docs-grid-showcase">col-12</div></div>
+        <div class="col-12 col-lg-6"><div class="docs-grid-showcase">col-12 col-lg-6</div></div>
+        <div class="col-12 col-lg-6"><div class="docs-grid-showcase">col-12 col-lg-6</div></div>
+        <div class="col-12">
+          <div class="row">
+            <div class="col-4"><div class="docs-grid-showcase">[nested] col-4</div></div>
+            <div class="col-4"><div class="docs-grid-showcase">[nested] col-4</div></div>
+            <div class="col-4"><div class="docs-grid-showcase">[nested] col-4</div></div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-2"><div class="docs-grid-showcase">col-12 col-lg-2</div></div>
+        <div class="col-12 col-lg-8 offset-lg-2"><div class="docs-grid-showcase">col-12 col-lg-8 offset-lg-2</div></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg"><div class="docs-grid-showcase">col-12 col-lg</div></div>
+        <div class="col-12 col-lg-auto"><div class="docs-grid-showcase">col-12 col-lg-auto</div></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-7"><div class="docs-grid-showcase">col-12 col-lg-7</div></div>
+        <div class="col-12 col-lg-5"><div class="docs-grid-showcase">col-12 col-lg-5</div></div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Gutter</h2>
+
+      <div class="row">
+        <div class="col-12">
+          <p>
+            You can cut the gutter in half with <code>g-2</code> or remove it completely with <code>g-0</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+      </div>
+      <div class="row g-0">
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+        <div class="col-12 col-lg-3"><div class="docs-grid-showcase">col-12 col-lg-3</div></div>
+      </div>
+
+    </div>
+  </div>
+
+</vue-template>
+
+`;

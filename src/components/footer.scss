@@ -1,0 +1,32 @@
+@use 'sass:color';
+@import '../common';
+
+footer {
+  padding: $spacing-5 0;
+  text-align: center;
+  color: $color-gray-2;
+  background: $color-gray-4;
+
+  li + li {
+    margin-top: 5px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  img {
+    opacity: .3;
+  }
+
+  .d-flex:last-child {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  footer {
+    text-align: left;
+  }
+}

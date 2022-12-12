@@ -1,0 +1,63 @@
+@use 'sass:color';
+@import '../common';
+
+.notification {
+  padding: 15px 15px 15px 44px;
+  font-size: $text-small;
+  font-weight: 600;
+  border-radius: $radius-s;
+  background-position: 16px 18px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+
+  a {
+    text-decoration: underline;
+    color: $color-blue-1;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+  }
+
+  &.is-success,
+  &.is-keycloak-success {
+    color: $color-safe;
+    background-color: color.scale($color-safe, $lightness: +90%);
+    background-image: $svg-notification-success;
+  }
+
+  &.is-error,
+  &.is-keycloak-error,
+  &.is-keycloak-warning {
+    color: $color-danger;
+    background-color: color.scale($color-danger, $lightness: +90%);
+    background-image: $svg-notification-error;
+  }
+
+  &.is-warning {
+    color: $color-warning;
+    background-color: color.scale($color-warning, $lightness: +90%);
+    background-image: $svg-notification-warning;
+  }
+
+  &.is-info,
+  &.is-keycloak-info {
+    color: $color-clickable;
+    background-color: color.scale($color-clickable, $lightness: +90%);
+    background-image: $svg-notification-info;
+  }
+
+  &.is-placeholder {
+    color: $color-gray-2;
+    background-color: $color-gray-4;
+    background-image: $svg-notification-placeholder;
+  }
+}
+
+.is-absolute-bottom-right {
+  position: absolute;
+  top: calc(100% + 20px);
+  right: 20px;
+  width: max-content;
+}

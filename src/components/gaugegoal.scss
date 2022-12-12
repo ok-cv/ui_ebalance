@@ -1,0 +1,59 @@
+@use 'sass:color';
+@import '../common';
+
+.gaugegoal {
+  position: relative;
+  max-width: 350px;
+  margin: auto;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  svg {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .gaugegoal-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    font-size: $text-small;
+    color: $color-gray-2;
+  }
+
+  .gaugegoal-current {
+    display: inline-block;
+    padding: 0 10px;
+    color: $color-white;
+    font-weight: 600;
+    border-radius: $radius-full;
+    background: $color-gray-1;
+  }
+
+  .gaugegoal-current-text {
+    margin-top: 10px;
+    font-size: $text-small;
+  }
+
+  .gaugegoal-percent {
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 20px);
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-gray-2;
+  }
+
+  &.is-over-40 .gaugegoal-percent {
+    top: 60px;
+    left: calc(50% - 95px);
+    color: $color-white;
+  }
+
+  &.is-over-60 .gaugegoal-percent {
+    top: 40px;
+    left: calc(50% - 20px);
+    color: $color-white;
+  }
+}

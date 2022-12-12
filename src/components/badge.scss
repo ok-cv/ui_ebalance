@@ -1,0 +1,38 @@
+@use 'sass:color';
+@import '../common';
+
+.badge {
+  display: inline-block;
+  padding: 0 7px;
+  font-size: $text-small;
+  font-weight: 600;
+  border-radius: $radius-s;
+  background-position: 16px 18px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+
+  &.is-success {
+    color: $color-safe;
+    background-color: color.scale($color-safe, $lightness: +90%);
+  }
+
+  &.is-error {
+    color: $color-danger;
+    background-color: color.scale($color-danger, $lightness: +90%);
+  }
+
+  &.is-warning {
+    color: $color-warning;
+    background-color: color.scale($color-warning, $lightness: +90%);
+  }
+
+  &.is-info {
+    color: $color-clickable;
+    background-color: color.scale($color-clickable, $lightness: +90%);
+  }
+
+  &.is-placeholder {
+    color: $color-gray-2;
+    background-color: $color-gray-4;
+  }
+}

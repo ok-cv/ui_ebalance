@@ -1,0 +1,72 @@
+@use 'sass:color';
+@import '../common';
+
+/* Fonts
+ * ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700');
+
+/* Reset
+ * ========================================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100vh;
+  color: $color-gray-1;
+  background: $color-white;
+}
+
+/* https://www.bram.us/2020/05/06/100vh-in-safari-on-ios/ */
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+p a {
+  color: $color-blue-2;
+}
+
+/* Selection
+ * ========================================================================== */
+
+::selection {
+  color: $color-white;
+  background: $color-blue-1;
+}
+
+/* No JavaScript | Internet Explorer
+ * ========================================================================== */
+
+.no-JS,
+.is-IE {
+  max-width: 530px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+_:-ms-input-placeholder, :root .is-IE {
+  display: block !important;
+}

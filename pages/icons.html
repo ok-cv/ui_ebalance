@@ -1,0 +1,360 @@
+const Icons = `
+
+<vue-template>
+
+  <div class="py-6">
+    <div style="max-width: 400px; margin: auto;">
+
+      <input type="text" class="docs-icon-copy">
+
+      <h1>Icons</h1>
+
+      <div class="docs-info my-4">
+        Click on an icon to copy it to the clipboard.
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4">
+          <div class="text-medium">ArrowDown</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowdown-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowdown-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowdown-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowdown-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">ArrowLeft</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowleft-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowleft-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowleft-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowleft-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">ArrowRight</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowright-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowright-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowright-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowright-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">ArrowUp</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowup-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowup-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowup-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-arrowup-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Bag</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bag-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bag-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bag-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bag-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Belly</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-belly-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-belly-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-belly-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-belly-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Biceps</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-biceps-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-biceps-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-biceps-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-biceps-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">BMI</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bmi-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bmi-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bmi-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bmi-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Bookmark</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmark-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmark-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmark-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmark-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">BookmarkFilled</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmarkfilled-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmarkfilled-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmarkfilled-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-bookmarkfilled-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Calendar</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-calendar-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-calendar-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-calendar-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-calendar-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Camera</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-camera-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-camera-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-camera-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-camera-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Check</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-check-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-check-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-check-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-check-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Clock</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-clock-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-clock-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-clock-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-clock-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Close</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-close-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-close-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-close-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-close-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Construction</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-construction-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-construction-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-construction-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-construction-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Copy</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-copy-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-copy-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-copy-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-copy-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Cupcake</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-cupcake-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-cupcake-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-cupcake-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-cupcake-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Edit</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-edit-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-edit-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-edit-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-edit-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Filter</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-filter-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-filter-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-filter-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-filter-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Fire</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-fire-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-fire-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-fire-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-fire-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Goal</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-goal-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-goal-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-goal-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-goal-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Heart</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heart-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heart-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heart-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heart-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">HeartFilled</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heartfilled-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heartfilled-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heartfilled-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-heartfilled-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">LoadingSpinner</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-loadingspinner-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-loadingspinner-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-loadingspinner-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-loadingspinner-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Move</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-move-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-move-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-move-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-move-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">MenuH</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuh-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuh-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuh-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuh-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">MenuV</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuv-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuv-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuv-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-menuv-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Minus</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-minus-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-minus-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-minus-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-minus-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Plus</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-plus-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-plus-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-plus-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-plus-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Refresh</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-refresh-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-refresh-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-refresh-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-refresh-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Replace</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-replace-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-replace-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-replace-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-replace-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Scale</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-scale-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-scale-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-scale-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-scale-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Search</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-search-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-search-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-search-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-search-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">SocialFacebook</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialfacebook-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialfacebook-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialfacebook-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialfacebook-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">SocialInstagram</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialinstagram-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialinstagram-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialinstagram-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialinstagram-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">SocialYoutube</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialyoutube-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialyoutube-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialyoutube-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-socialyoutube-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Tapeline</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-tapeline-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-tapeline-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-tapeline-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-tapeline-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Timer</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-timer-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-timer-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-timer-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-timer-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Trash</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-trash-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-trash-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-trash-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-trash-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Users</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-users-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-users-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-users-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-users-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Utensils</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-utensils-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-utensils-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-utensils-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-utensils-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Watch</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-watch-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-watch-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-watch-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-watch-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">WaterEmpty</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterempty-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterempty-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterempty-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterempty-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">WaterEmptyPlus</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-wateremptyplus-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-wateremptyplus-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-wateremptyplus-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-wateremptyplus-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">WaterFull</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterfull-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterfull-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterfull-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-waterfull-white"></div></div></div>
+        <div class="col-12 col-md-4">
+          <div class="text-medium">Weight</div>
+        </div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-weight-gray-1"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-weight-gray-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-weight-blue-2"></div></div></div>
+        <div class="col-2"><div class="docs-icon"><div class="icon icon-weight-white"></div></div></div>
+      </div>
+
+      <div class="mt-5 text-center">
+        Loading Indicator Demo:
+        <div class="loading-indicator mt-5">
+          <div class="icon icon-loadingspinner-gray-1"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</vue-template>
+
+`;

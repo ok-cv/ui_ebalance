@@ -1,0 +1,51 @@
+@use 'sass:color';
+@import '../../common';
+
+.checkbox,
+.radio {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  font-size: $text-medium;
+  cursor: pointer;
+}
+
+.checkbox + .checkbox,
+.radio + .radio {
+  margin-top: $spacing-2;
+}
+
+.checkbox input,
+.radio input {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  box-shadow: inset 0 0 0 1.5px color.scale($color-gray-2, $lightness: +50%);
+  transition: $time;
+}
+
+.checkbox .label a,
+.radio .label a {
+  color: $color-blue-2;
+}
+
+.checkbox input {
+  border-radius: 2px;
+  background: $color-white 1px / 18px;
+}
+
+.radio input {
+  border-radius: 50%;
+}
+
+.checkbox input:checked {
+  background: $color-blue-2 1px / 18px $svg-input-check-white;
+  box-shadow: inset 0 0 0 1.5px $color-blue-2;
+}
+
+.radio input:checked {
+  background: $color-blue-2 $svg-input-radio-white;
+  box-shadow: inset 0 0 0 1.5px $color-blue-2;
+}

@@ -1,0 +1,20 @@
+@use 'sass:color';
+@import '../common';
+
+.infoparagraph {
+  text-align: center;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  h2, p {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 25px 0 30px;
+  }
+}

@@ -1,0 +1,906 @@
+const ComponentsInputs = `
+
+<vue-template>
+
+  <div class="py-6">
+    <div class="container">
+
+      <h1>Inputs</h1>
+
+      <h2 class="mt-6 mb-4">Text</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty and optional</div>
+          <div class="input">
+            <input type="text" placeholder=" ">
+            <label>Label <span class="is-optional">(optional)</span></label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="input">
+            <input type="text" placeholder=" " value="User Input">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Invalid</div>
+          <div class="input">
+            <input type="text" placeholder=" ">
+            <label>Label</label>
+            <div class="input-error">This field is required.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Disabled</div>
+          <div class="input">
+            <input type="text" placeholder=" " value="User Input" disabled>
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Password</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty</div>
+          <div class="input">
+            <input type="password" placeholder=" ">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="input">
+            <input type="password" placeholder=" " value="User Input">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Invalid</div>
+          <div class="input">
+            <input type="password" placeholder=" ">
+            <label>Label</label>
+            <div class="input-error">This field is required.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Disabled</div>
+          <div class="input">
+            <input type="password" placeholder=" " value="User Input" disabled>
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Number</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty</div>
+          <div class="input">
+            <input type="number" placeholder=" ">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="input">
+            <input type="number" placeholder=" " value="123">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Invalid</div>
+          <div class="input">
+            <input type="number" placeholder=" ">
+            <label>Label</label>
+            <div class="input-error">This field is required.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Disabled</div>
+          <div class="input">
+            <input type="number" placeholder=" " value="123" disabled>
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Date</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty</div>
+          <div class="input">
+            <input type="date" placeholder=" ">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="input">
+            <input type="date" placeholder=" " value="2021-01-01">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Invalid</div>
+          <div class="input">
+            <input type="date" placeholder=" ">
+            <label>Label</label>
+            <div class="input-error">This field is required.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Disabled</div>
+          <div class="input">
+            <input type="date" placeholder=" " value="2021-01-01" disabled>
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Select</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty</div>
+          <div class="input">
+            <select required>
+              <option selected disabled>Please choose</option>
+              <option>Option</option>
+            </select>
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="input">
+            <select>
+              <option disabled>Please choose</option>
+              <option selected>Option</option>
+            </select>
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Invalid</div>
+          <div class="input">
+            <select>
+              <option selected disabled>Please choose</option>
+              <option>Option</option>
+            </select>
+            <label>Label</label>
+            <div class="input-error">This field is required.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Disabled</div>
+          <div class="input">
+            <select disabled>
+              <option disabled>Please choose</option>
+              <option selected>Option</option>
+            </select>
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Textarea</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state mb-3">Empty and optional</div>
+          <div class="input">
+            <textarea placeholder=" "></textarea>
+            <label>Label <span class="is-optional">(optional)</span></label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state mb-3">Filled</div>
+          <div class="input">
+            <textarea placeholder=" ">User Input</textarea>
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state mb-3">Invalid</div>
+          <div class="input">
+            <textarea placeholder=" "></textarea>
+            <label>Label</label>
+            <div class="input-error">This field is required.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state mb-3">Disabled</div>
+          <div class="input">
+            <textarea placeholder=" " disabled>User Input</textarea>
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Autocomplete</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty and closed</div>
+          <div class="input">
+            <input type="text" placeholder=" ">
+            <label>Label</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Open</div>
+          <div class="input">
+            <input type="text" placeholder=" ">
+            <label>Label</label>
+            <ul class="autocomplete-dropdown">
+              <li><a>Option</a></li>
+              <li><a>Option</a></li>
+              <li><a>Option</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Suggestion</div>
+          <div class="input">
+            <input type="text" placeholder=" " value="User Input" disabled class="autocomplete-suggestion">
+            <input type="text" placeholder=" " value="Us">
+            <label>Label</label>
+            <ul class="autocomplete-dropdown">
+              <li><a><mark>Us</mark>er Input</a></li>
+              <li><a><mark>Us</mark>er Input</a></li>
+              <li><a><mark>Us</mark>er Input</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="input">
+            <input type="text" placeholder=" " value="User Input">
+            <label>Label</label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Food Amount / Unitpicker</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty</div>
+          <div class="foodamount">
+            <div class="input">
+              <input type="text" placeholder=" ">
+              <label>Label</label>
+            </div>
+            <select class="unitpicker">
+              <option selected>ml</option>
+              <option>g</option>
+              <option>kg</option>
+              <option>Stk.</option>
+              <option>l</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Filled</div>
+          <div class="foodamount">
+            <div class="input">
+              <input type="text" placeholder=" " value="500">
+              <label>Label</label>
+            </div>
+            <select class="unitpicker">
+              <option selected>ml</option>
+              <option>g</option>
+              <option>kg</option>
+              <option>Stk.</option>
+              <option>l</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Input with fixed label</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Empty</div>
+          <div class="input">
+            <input type="text" placeholder=" ">
+            <label>Label</label>
+            <span class="fixed-label">pro 100g</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Small Stepper Buttons</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="input has-stepper-buttons m-0">
+            <input type="text" placeholder=" " value="90.0">
+            <a></a>
+            <a></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <div class="input has-stepper-buttons m-0">
+            <input type="text" placeholder=" " value="90.0">
+            <a></a>
+            <a></a>
+            <div class="input-error">Diese Eingabe ist Pflicht.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Large Stepper Buttons</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="input has-stepper-buttons is-large">
+            <input type="text" placeholder=" " value="90.0">
+            <a></a>
+            <a></a>
+          </div>
+          <h2 class="mt-2 text-center">KG</h2>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Checkbox</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Default</div>
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="label">Label</span>
+          </label>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Checked</div>
+          <label class="checkbox">
+            <input type="checkbox" checked>
+            <span class="label">Label</span>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Radio</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Default</div>
+          <label class="radio">
+            <input type="radio">
+            <span class="label">Label</span>
+          </label>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Checked</div>
+          <label class="radio">
+            <input type="radio" checked>
+            <span class="label">Label</span>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Toggle</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Default</div>
+          <label class="toggle">
+            <input type="checkbox">
+            <span class="label-left">False</span>
+            <span class="label-right">True</span>
+          </label>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">Checked</div>
+          <label class="toggle">
+            <input type="checkbox" checked>
+            <span class="label-left">False</span>
+            <span class="label-right">True</span>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Button</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">&lt;button&gt;&lt;/button&gt;</div>
+          <button class="btn">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">&lt;input type=button&gt;</div>
+          <input type="button" value="Button" class="btn">
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">&lt;input type=submit&gt;</div>
+          <input type="submit" value="Button" class="btn">
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="docs-state">&lt;a&gt;&lt;/a&gt;</div>
+          <a class="btn">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-small">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-small">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-small">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-small">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-tiny">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-tiny">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-tiny">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-tiny">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-outlined">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-outlined">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-outlined">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-outlined">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-small is-outlined">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-small is-outlined">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-small is-outlined">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-small is-outlined">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-tiny is-outlined">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-tiny is-outlined">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-tiny is-outlined">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-tiny is-outlined">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-secondary">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-secondary">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-secondary">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-secondary">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-small is-secondary">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-small is-secondary">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-small is-secondary">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-small is-secondary">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-tiny is-secondary">Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-tiny is-secondary">
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-tiny is-secondary">
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-tiny is-secondary">Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn" disabled>Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn" disabled>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn" disabled>
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn" disabled>Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-small" disabled>Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-small" disabled>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-small" disabled>
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-small" disabled>Button</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <button class="btn is-tiny" disabled>Button</button>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="button" value="Button" class="btn is-tiny" disabled>
+        </div>
+        <div class="col-12 col-lg-3">
+          <input type="submit" value="Button" class="btn is-tiny" disabled>
+        </div>
+        <div class="col-12 col-lg-3">
+          <a class="btn is-tiny" disabled>Button</a>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Range</h2>
+
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="range" data-start="1" data-end="30" data-value="1"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="range" data-start="0" data-end="41" data-value="41"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="range" data-start="1300" data-end="2300" data-value="1800"></div>
+        </div>
+      </div>
+
+      <div class="row mt-4 pt-2">
+        <div class="col-12">
+          <p>The range is fully responsive and contains four layers of DOM elements, positioned on top of each other:</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <p>1st layer: a blue range</p>
+          <p>2nd layer: a gray range, clipped with CSS clip-path</p>
+          <p>3rd layer: the marker with the current value</p>
+          <p>4th layer: the default HTML input, hidden with CSS opacity</p>
+        </div>
+        <div class="col-12 col-lg-6 docs-range-showcase">
+          <div class="range" data-start="0" data-end="30" data-value="15"></div>
+        </div>
+      </div>
+
+      <div class="row mt-4 pt-2">
+        <div class="col-12 col-lg-6">
+          <p>The steps available are generated with JavaScript. Is the total amount of steps larger than 100, only every tenth step is displayed.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="range" data-start="1" data-end="101" data-value="101"></div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Tag</h2>
+
+      <div class="row">
+        <div class="col-12">
+          <p>
+            The tag is by default clickable. If it is supposed to be static, a theme
+            class <code>is-static</code> can be attached.
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <label class="tag">
+            <input type="checkbox" checked>
+            <span class="label">Lorem Ipsum</span>
+          </label>
+          <label class="tag">
+            <input type="checkbox">
+            <span class="label">Lorem Ipsum</span>
+          </label>
+        </div>
+        <div class="col-12 col-lg-6">
+          <label class="tag is-static">
+            <span class="label">Lorem Ipsum</span>
+          </label>
+          <label class="tag is-static">
+            <span class="label">Lorem Ipsum</span>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Textpicker</h2>
+
+      <div class="row g-0 align-items-center justify-content-between">
+        <div class="col-12 col-lg-6">
+          <label class="textpicker">
+            <input type="radio" name="textpicker" checked>
+            <span class="label">Lorem Ipsum</span>
+          </label>
+          <label class="textpicker">
+            <input type="radio" name="textpicker">
+            <span class="label">Lorem Ipsum</span>
+          </label>
+          <label class="textpicker">
+            <input type="radio" name="textpicker">
+            <span class="label">Lorem Ipsum</span>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Panepicker</h2>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner">
+              1 Monat <span class="panepicker-price">CHF<span class="panepicker-number">50.00</span>/ mtl.</span>
+            </div>
+          </label>
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner">
+              3 Monate <span class="panepicker-price">CHF<span class="panepicker-number">0.00</span>/ mtl.</span>
+              <p class="panepicker-description mt-2">
+                Das kostenfreie Paket für eBalance Kunden mit einer aktiven
+                Mitgliedschaft. Geben Sie hier einfach Ihren Gutscheincode ein
+                und genießen Sie unsere neue Platform kostenfrei.
+              </p>
+            </div>
+          </label>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code> & <code>is-invoice</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner is-invoice">
+              Rechnung
+            </div>
+          </label>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code> & <code>is-payrexx</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner is-payrexx">
+              Online-Zahlung
+              <p class="panepicker-description mt-5">
+                Mit dem Bezahlvorgang unseres Partners Payrexx bekommen Sie nach
+                Ihrem Bestellabschluss eine E-Mail mit einem Link zugesendet.
+              </p>
+            </div>
+          </label>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code> & <code>is-payrexx-without-postfinance</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner is-payrexx-without-postfinance">
+              Online-Zahlung
+              <p class="panepicker-description mt-5">
+                Mit dem Bezahlvorgang unseres Partners Payrexx bekommen Sie nach
+                Ihrem Bestellabschluss eine E-Mail mit einem Link zugesendet.
+              </p>
+            </div>
+          </label>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code> & <code>is-paypal</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner is-paypal">
+              PayPal
+            </div>
+          </label>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code> & <code>is-creditcard</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner is-creditcard">
+              Kreditkarte
+            </div>
+          </label>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>panepicker</code> & <code>is-postfinance</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="panepicker">
+            <input type="radio">
+            <div class="panepicker-inner is-postfinance">
+              Postfinance
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Imageupload</h2>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>imageupload</code> & <code>is-circle</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="imageupload is-circle">
+            <div class="imageupload-input">
+              <input type="file">
+              <div class="icon icon-camera-gray-2"></div>
+              <span class="label">Bild auswählen</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="imageupload is-circle">
+            <div class="imageupload-input">
+              <img src="dist/img/demo/salad-4.jpg">
+              <input type="file">
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn is-small is-secondary">Delete</button>
+              <button class="btn is-small">Replace</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="docs-classnames">
+            <code>imageupload</code> & <code>is-rectangle</code>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="imageupload is-rectangle">
+            <div class="imageupload-input">
+              <input type="file">
+              <div class="icon icon-camera-gray-2"></div>
+              <span class="label">Bild auswählen</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="imageupload is-rectangle">
+            <div class="imageupload-input">
+              <img src="dist/img/demo/salad-4.jpg">
+              <input type="file">
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn is-small is-secondary">Delete</button>
+              <button class="btn is-small">Replace</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-6 mb-4">Rich Text Editor</h2>
+
+      <div class="mb-4">
+        <div class="docs-info">
+          This is a React plugin.
+        </div>
+      </div>
+
+      <div class="rdw-editor-wrapper" aria-label="rdw-wrapper">
+        <div class="rdw-editor-toolbar" aria-label="rdw-toolbar" aria-hidden="false" style="visibility: visible;">
+          <div class="rdw-inline-wrapper" aria-label="rdw-inline-control">
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+          </div>
+          <div class="rdw-list-wrapper" aria-label="rdw-list-control">
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+          </div>
+          <div class="rdw-text-align-wrapper" aria-label="rdw-textalign-control">
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+          </div>
+          <div class="rdw-history-wrapper" aria-label="rdw-history-control">
+            <div class="rdw-option-wrapper">IMG</div>
+            <div class="rdw-option-wrapper">IMG</div>
+          </div>
+        </div>
+        <div class="rdw-editor-main">
+          <div class="DraftEditor-root">
+            <div class="DraftEditor-editorContainer">
+              <div aria-describedby="placeholder-8p95n" aria-label="rdw-editor" class="notranslate public-DraftEditor-content" contenteditable="true" role="textbox" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</vue-template>
+
+`;
